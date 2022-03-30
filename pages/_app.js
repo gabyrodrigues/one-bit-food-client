@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <main>
         <Header />
-        <Container>
+        <Container className="mt-6">
           <Component {...pageProps} />
         </Container>
       </main>
