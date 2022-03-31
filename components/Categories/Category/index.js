@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function Category(props) {
-	return(
+	return (
 		<div className="slider-item">
 			<Link href={`/restaurants?category=${props.title}`}>
 				<a>

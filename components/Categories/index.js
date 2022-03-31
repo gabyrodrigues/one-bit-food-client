@@ -27,7 +27,7 @@ export default function Categories() {
 		}
  	}
 
-	return(
+	return (
 		<>
 			<h3 className="fw-bold">Categorias</h3>
 			{renderContent()}
