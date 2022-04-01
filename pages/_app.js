@@ -12,12 +12,12 @@ function MyApp({ Component, pageProps }) {
         <link ref="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
-        <Container className="mt-6">
-          <RecoilRoot>
+        <RecoilRoot>
+          <Header />
+          <Container className="mt-6">
             <Component {...pageProps} />
-          </RecoilRoot>
-        </Container>
+          </Container>
+        </RecoilRoot>
       </main>
     </>
   )

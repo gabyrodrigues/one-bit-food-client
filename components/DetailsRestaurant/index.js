@@ -1,8 +1,8 @@
-import CategoryProducts from "./CategoryProducts"
-import Details from "./Details"
+import CategoryProducts from './CategoryProducts'
+import Details from './Details'
 import { Spinner, Alert } from 'react-bootstrap'
-import { useRouter } from "next/router"
-import getRestaurant from "../../services/getRestaurant"
+import { useRouter } from 'next/router'
+import getRestaurant from '../../services/getRestaurant'
 
 export default function DetailsRestaurant() {
   const router = useRouter()

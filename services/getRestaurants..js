@@ -1,9 +1,12 @@
-import useSWR from "swr"
-import { useRouter } from "next/router"
+import useSWR from 'swr'
+import { useRouter } from 'next/router'
+import { useRecoilState } from 'recoil'
+import addressState from '../store/atoms/adressAtom'
 
 export default function getRestaurants() {
 	const router = useRouter()
 	const { category, query } = router.query
+	const [address] = useRecoilState(addressState)
 
 	let params = ''
 	if(category)
@@ -11,6 +14,9 @@ export default function getRestaurants() {
 
 	if(query)
 		params = `${params == '' ? '?' : '&'}query=${query}`
+
+	if(address.city !== '')
+		params = `${params == '' ? '?' : '&'}city=${address.city}`
 
 	const fetcher = (...args) => fetch(...args).then((response) => response.json())
 

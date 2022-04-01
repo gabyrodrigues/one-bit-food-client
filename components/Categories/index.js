@@ -1,10 +1,10 @@
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import slickSettings from "./slick_settings"
-import { Card, Col, Spinner, Alert } from "react-bootstrap"
-import Category from "./Category"
-import getCategories from "../../services/getCategories"
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import slickSettings from './slick_settings'
+import { Card, Col, Spinner, Alert } from 'react-bootstrap'
+import Category from './Category'
+import getCategories from '../../services/getCategories'
 
 export default function Categories() {
 	const { categories, isLoading, isError } = getCategories()
