@@ -19,14 +19,14 @@ export default function CartModal(props) {
       onHide={() => props.onHide()}
     >
       <Modal.Header>
-        <h5 className='fw-bold mt-2'>Carrinho</h5>
+        <h5 className="fw-bold mt-2">Carrinho</h5>
       </Modal.Header>
       <Modal.Body>
         <Cart show={props.show} />
         {cart.products.length > 0 && (
           <div className="text-center pt-2">
             <Link href='/orders/new'>
-              <Button variant="custom-red text-white">Finalizar pedido</Button>
+              <Button variant="custom-red text-white" onClick={() => props.onHide()}>Finalizar pedido</Button>
             </Link>
           </div>
         )}

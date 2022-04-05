@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import { useRecoilState } from 'recoil'
 
 import getAvailableCities from '../../../services/getAvailableCities'
-import addressState from '../../../store/atoms/adressAtom'
+import addressState from '../../../store/atoms/addressAtom'
 
 export default function FormAddress(props) {
   const { available_cities, isLoading, isError } = getAvailableCities()

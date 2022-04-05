@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import FormAddress from './FormAddress'
 
 import { useRecoilState } from 'recoil'
-import addressState from '../../store/atoms/adressAtom'
+import addressState from '../../store/atoms/addressAtom'
 
 export default function AddressModal(props) {
   const [address, setAddress] = useRecoilState(addressState)
@@ -27,7 +27,7 @@ export default function AddressModal(props) {
      keyboard={false}
     >
       <Modal.Header>
-        <h5 className='fw-bold mt-2'>Endereço de entrega</h5>
+        <h5 className="fw-bold mt-2">Endereço de entrega</h5>
       </Modal.Header>
       <Modal.Body>
         <FormAddress 

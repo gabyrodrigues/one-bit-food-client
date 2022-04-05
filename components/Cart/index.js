@@ -27,13 +27,13 @@ export default function Cart() {
 
   return (
     <>
-      <h5 className='fw-bolder'>{cart.restaurant.name}</h5>
+      <h5 className="fw-bolder">{cart.restaurant.name}</h5>
       <hr />
       {cart.products.map((product, i) =>
         <div key={product.id} className="mb-4" key={i}>
           <Row>
             <Col md={8} xs={8}>
-              <small className='fw-bolder'>{product.quantity}x {product.name}</small>
+              <small className="fw-bolder">{product.quantity}x {product.name}</small>
             </Col>
             <Col md={4} xs={4} className="text-right">
               <small >
@@ -50,7 +50,7 @@ export default function Cart() {
                 size="sm"
                 variant="outline-dark"
                 onClick={() => removeProduct(product)}
-                className='border px-1 border-custom-gray'
+                className="border px-1 border-custom-gray"
               >
                 Remover
               </Button>
@@ -78,10 +78,10 @@ export default function Cart() {
       </Row>
       <Row className="mb-4">
         <Col md={8} xs={8}>
-          <p className='fw-bolder'>Total</p>
+          <p className="fw-bolder">Total</p>
         </Col>
         <Col md={4} xs={4} className="text-right">
-          <p className='fw-bolder'>{toCurrency(total())}</p>
+          <p className="fw-bolder">{toCurrency(total())}</p>
         </Col>
       </Row>
     </>

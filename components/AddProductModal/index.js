@@ -39,7 +39,7 @@ export default function AddProductModal(props) {
       onHide={() => props.onHide()}
     >
       <Modal.Header>
-        <h5 className='fw-bold mt-2'>Adicionar produto</h5>
+        <h5 className="fw-bold mt-2">Adicionar produto</h5>
       </Modal.Header>
       <Modal.Body>
         <Row>
@@ -54,10 +54,10 @@ export default function AddProductModal(props) {
         </Row>
         <Row className="pb-0">
           <Col md={8}>
-            <p className='fw-bold mb-0'>{props.product.name}</p>
+            <p className="fw-bold mb-0">{props.product.name}</p>
           </Col>
           <Col>
-            <small className='border px-1 border-custom-gray fw-bold'>
+            <small className="border px-1 border-custom-gray fw-bold">
               {toCurrency(props.product.price)}
             </small>
           </Col>
@@ -67,7 +67,7 @@ export default function AddProductModal(props) {
             <p><small>{truncateString(props.product.description, 60)}</small></p>
           </Col>
         </Row>
-        <Form onSubmit={addProduct} className='d-flex'>
+        <Form onSubmit={addProduct} className="d-flex">
           <Form.Group>
             <Form.Control
               required
