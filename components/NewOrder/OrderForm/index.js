@@ -32,7 +32,7 @@ export default function OrderForm() {
 
     try {
       await createOrder(order)
-      router.push('order/success')
+      router.push('/orders/success')
       resetCart()
     } catch (error) {
       console.log("error", error)
@@ -42,7 +42,7 @@ export default function OrderForm() {
 
   return (
     <Form onSubmit={e => submitOrder(e)}>
-      <h4 className='fw-bold mb-5'>Detalhes finais</h4>
+      <h4 className="fw-bold mb-5">Detalhes finais</h4>
       <Form.Group>
         <Form.Label>Nome completo</Form.Label>
         <Form.Control
@@ -54,7 +54,7 @@ export default function OrderForm() {
           name="name"
         />
       </Form.Group>
-      <Form.Group className='mt-3'>
+      <Form.Group className="mt-3">
         <Form.Label>Número de telefone</Form.Label>
         <Form.Control
           required
@@ -67,7 +67,7 @@ export default function OrderForm() {
       </Form.Group>
       
       <div className="mt-5">
-        <p className='fw-bolder'>Entregar em:</p>
+        <p className="fw-bolder">Entregar em:</p>
         <p><small>{address.street} {address.number} {address.neighborhood}, {address.city}</small></p>
       </div>
 
