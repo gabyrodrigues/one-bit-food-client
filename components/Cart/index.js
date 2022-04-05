@@ -30,7 +30,7 @@ export default function Cart() {
       <h5 className="fw-bolder">{cart.restaurant.name}</h5>
       <hr />
       {cart.products.map((product, i) =>
-        <div key={product.id} className="mb-4" key={i}>
+        <div key={product.id} className="mb-4">
           <Row>
             <Col md={8} xs={8}>
               <small className="fw-bolder">{product.quantity}x {product.name}</small>

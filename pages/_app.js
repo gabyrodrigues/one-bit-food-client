@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>OneBitFood V2</title>
-        <link ref="icon" href="/favicon.ico" />
+        <link rel='icon' href="/favicon.ico" />
       </Head>
       <main>
         <RecoilRoot>
